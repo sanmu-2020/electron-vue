@@ -1,0 +1,20 @@
+body, html {
+  background: #fff;
+  height: 100%;
+  color: #303133;
+  user-select: none;
+}
+//滚动条
+::-webkit-scrollbar{width:6px;background-color:transparent}
+::-webkit-scrollbar-track{background:0 0}
+::-webkit-scrollbar-thumb{background:#dfdfdf;border-radius:8px}
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  .window-appicon{
+    background: url(../assets/logo.png) no-repeat left center;
+  }
+  .window-title{
+    font-size: 16px !important;
+  }
+}
