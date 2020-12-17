@@ -29,7 +29,7 @@
 // import { ipcRenderer } from 'electron'
 // import personalized from '@/components/personalized.vue'
 export default {
-  name: 'Personalized',
+  name: 'Personalized-mid',
   components: {
   },
   data() {
@@ -80,7 +80,7 @@ export default {
       }
     }
     .ui-exclusive-play{
-       width: 31.2%;
+      width: 31.2%;
     }
   }
 </style>

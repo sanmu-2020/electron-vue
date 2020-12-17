@@ -5,8 +5,12 @@
         <gys-personalized />
         <gys-personalized-middle />
       </el-tab-pane>
-      <el-tab-pane label="歌单" name="playlist">歌单</el-tab-pane>
-      <el-tab-pane label="排行榜" name="KTV">排行榜</el-tab-pane>
+      <el-tab-pane label="歌单" name="playlist">
+        <gys-playlist />
+      </el-tab-pane>
+      <el-tab-pane label="排行榜" name="KTV">
+        <gys-top />
+      </el-tab-pane>
       <el-tab-pane label="歌手" name=" singer">歌手</el-tab-pane>
     </el-tabs>
   </div>
@@ -18,11 +22,15 @@
 // import { ipcRenderer } from 'electron'
 import personalized from '@/components/personalized.vue'
 import personalizedMiddle from '@/components/personalized-middle.vue'
+import playList from '@/components/playList.vue'
+import topList from '@/components/topList.vue'
 export default {
   name: 'DiscovrMusic',
   components: {
     'gys-personalized': personalized,
-    'gys-personalized-middle': personalizedMiddle
+    'gys-personalized-middle': personalizedMiddle,
+    'gys-playlist': playList,
+    'gys-top': topList
   },
   data() {
     return {
