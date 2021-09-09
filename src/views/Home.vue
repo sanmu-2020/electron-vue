@@ -22,6 +22,7 @@ export default {
     ipcRenderer.on('new-file', (e, data)=>{
       console.log('event\n ', e)
       console.log('data\n ', data)
+      alert('渲染进程接受了消息')
     })
   },
   methods: {

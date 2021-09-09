@@ -6,7 +6,7 @@ const setMenuConfig = (win) => {
     {
       label:'文件',
       submenu:[{
-        label:'新建文件',
+        label:'渲染交互',
         //监听事件
         click:function(){
           // 主进程处理渲染进程广播数据，并反馈给渲染进程
@@ -17,13 +17,19 @@ const setMenuConfig = (win) => {
         accelerator :'ctrl+n'
       },
       {
-        label:'新建窗口'
+        label:'窗口变大',
+        click: function() {
+          win.setSize(1440, 900)
+        }
       }]
     },
   ]
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
-  setTrayMenu(win)
+  if (process.platform !== 'darwin') { // windows 设置托盘图标和菜单
+    console.log('process.platform-==',process.platform)
+    setTrayMenu(win)
+  }
 }
 function setTrayMenu (win) {
   let trayMenuTemplate = [{//系统托盘图标目录

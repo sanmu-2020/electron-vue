@@ -20,7 +20,7 @@ async function createWindow() {
     titleBarStyle: 'hidden',
     // title: '云音乐',
     // backgroundColor: './assets/loading.gif',
-    icon: path.join(__dirname, '../public/favicon.ico'),
+    icon: path.join(__dirname, '../src/assets/logo.png'),
     frame: false,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
@@ -28,6 +28,10 @@ async function createWindow() {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
     }
   })
+  if (process.platform === 'darwin') {
+      app.dock.setIcon(path.join(__dirname, '../src/assets/logo.png'));
+  }
+
   setMenuConfig(win)
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode

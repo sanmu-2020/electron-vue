@@ -7,17 +7,17 @@
           <el-menu-item index="discovrMusic" >
             <router-link to="/discovrMusic" class="ui-router-item">发现音乐</router-link>
           </el-menu-item>
-          <el-menu-item index="1-2">
+          <el-menu-item index="About">
             <router-link to="/about" class="ui-router-item">视频</router-link>
           </el-menu-item>
-          <el-menu-item index="1-3">
-            <router-link to="/" class="ui-router-item">朋友</router-link>
+          <el-menu-item index="Topic">
+            <router-link to="/topic" class="ui-router-item">朋友</router-link>
           </el-menu-item>
           <li class="ui-menu-text">我的音乐</li> 
-          <el-menu-item index="1-4">
+          <el-menu-item index="Home">
             <router-link to="/" class="ui-router-item"><i class="el-icon-headset"></i>本地音乐</router-link>
           </el-menu-item>
-          <el-menu-item index="1-5">
+          <el-menu-item index="Home">
             <router-link to="/" class="ui-router-item"><i class="el-icon-download"></i>下载音乐</router-link>
           </el-menu-item>
           <!-- <el-submenu index="1"> -->
